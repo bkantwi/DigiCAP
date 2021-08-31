@@ -3,7 +3,6 @@ File: guessmynumber.py
 ----------------------
 This program checks if a user's guess of a number matches that guessed by the computer
 """
-
 # import random library
 import random
 number = (random.randint(1, 99))
