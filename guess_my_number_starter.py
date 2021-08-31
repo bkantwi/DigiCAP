@@ -25,5 +25,5 @@ while guessed_number != number:
         guessed_number = int(input("Guess an integer between 1 and 99: "))
         user_guess += 1
 
-# Print if user has got the correct guess
+# Print if user has got the correct guess for the random number
 print("Congratulations on your correct guess")
