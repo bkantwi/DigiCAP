@@ -9,20 +9,24 @@ randomly generating integers between 10 and 99 inclusive. The program returns fe
 import random
 # use code below  to generate a random integer between 30 and 50 for example
 # print(random.randint(10, 99))
-
+correct_answers = 0
 # ********************************** YOUR CODE GOES BELOW HERE *********************************************************
-a = random.randint(10, 99)
-b = random.randint(10, 99)
-c = a + b
-d = True
-guesses = 1
-user_answer = int(input(f"What is {a} + {b}? "))
+while True:
+    a = random.randint(10, 99)
+    b = random.randint(10, 99)
 
-while user_answer != c:
-    if user_answer != c:
-        print(f"Your answer is {user_answer}. Correct answer is {c}")
-        user_answer = int(input(f"What is {a} + {b}? "))
-        guesses = guesses + 1
-    elif user_answer == c:
+    print("What is " + str(a) + " plus " + str(b) + "?")
+    user_answer = int(input())
+
+    if user_answer == (a+b):
         print("Correct")
-    break
+        correct_answers += 1
+    else:
+        print("Incorrect. The answer is " + str(a+b))
+        correct_answers = correct_answers -correct_answers
+
+    print("Player has " + str(correct_answers) + " points")
+
+    if correct_answers == 3:
+        print("Congrats. You have mastered addition")
+        break
